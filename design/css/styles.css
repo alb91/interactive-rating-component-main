@@ -20,6 +20,14 @@ body {
 
 .star {
   margin: 15px 5px;
+  background-color: hsl(213, 19%, 18%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  padding: 10px;
 }
 
 .feedback-main {
@@ -35,9 +43,21 @@ body {
 .rating {
   list-style-type: none;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   color: hsl(217, 12%, 63%);
   margin: 15px 5px;
+}
+
+.star,
+.rating li {
+  background-color: hsl(213, 19%, 18%);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  padding: 10px;
 }
 
 .submit {
