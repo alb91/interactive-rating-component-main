@@ -8,7 +8,43 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: black;
+  font-family: "Overpass", sans-serif;
 }
 
 .main {
+  background: linear-gradient(hsl(213, 19%, 18%), hsl(216, 12%, 8%));
+  border-radius: 25px;
+  padding: 25px;
+}
+
+.star {
+  margin: 15px 5px;
+}
+
+.feedback-main {
+  color: hsl(0, 0%, 100%);
+  margin: 15px 5px;
+}
+
+.feedback-text {
+  color: hsl(217, 12%, 63%);
+  margin: 15px 0px;
+}
+
+.rating {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  color: hsl(217, 12%, 63%);
+  margin: 15px 5px;
+}
+
+.submit {
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  border-radius: 25px;
+  margin: 25px;
+  padding: 10px;
 }
