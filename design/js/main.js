@@ -1,17 +1,20 @@
 const mainCard = document.getElementById("mainCard");
 const secondaryCard = document.getElementById("secondaryCard");
 const ratingItems = document.querySelectorAll(".rating li");
-const submitSelection = document.getElementById(".submitSelection");
+const submitSelection = document.getElementById("submitSelection");
 
-// Keep color active when clicked on
-let selectedRatingItem = null;
-
-// Hiding second card
-function hideSecondaryCard() {
-  secondaryCard.style.display = "none";
+// Hiding main card
+function hideMainCard(displayValue) {
+  mainCard.style.display = displayValue;
 }
 
-hideSecondaryCard();
+hideMainCard("block");
+// Hiding second card
+function hideSecondaryCard(displayValue) {
+  secondaryCard.style.display = displayValue;
+}
+
+hideSecondaryCard("none");
 
 // Hover function for rating numbers
 
@@ -36,6 +39,10 @@ ratingItems.forEach(function (item) {
 
 //Click function for submit button
 submitSelection.addEventListener("click", function () {
+  //Make a loading screen so that it shows the change of these values before moving to next card.
   this.style.backgroundColor = "hsl(0, 0%, 100%)";
-  this.stylecolor = "hsl(25, 97%, 53%)";
+  this.style.color = "hsl(25, 97%, 53%)";
+  //Make my second card to appear
+  hideSecondaryCard("block");
+  hideMainCard("none");
 });
