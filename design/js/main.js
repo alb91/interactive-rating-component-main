@@ -2,7 +2,10 @@ const mainCard = document.getElementById("mainCard");
 const secondaryCard = document.getElementById("secondaryCard");
 const ratingItems = document.querySelectorAll(".rating li");
 const submitSelection = document.getElementById("submitSelection");
+const starSelected = document.getElementById("starSelected");
 
+//Value selection
+let selectedValue = null;
 // Hiding main card
 function hideMainCard(displayValue) {
   mainCard.style.display = displayValue;
@@ -32,6 +35,7 @@ ratingItems.forEach(function (item) {
   //Click function for rating numbers
   item.addEventListener("click", function () {
     // Add styles to the click Item
+    selectedValue = item.innerHTML;
     this.style.backgroundColor = "hsl(25, 97%, 53%)";
     this.style.color = "hsl(0, 0%, 100%)";
   });
@@ -43,6 +47,12 @@ submitSelection.addEventListener("click", function () {
   this.style.backgroundColor = "hsl(0, 0%, 100%)";
   this.style.color = "hsl(25, 97%, 53%)";
   //Make my second card to appear
-  hideSecondaryCard("block");
-  hideMainCard("none");
+  function infoSubmitted() {
+    alert("Thank you for your feedback!");
+    hideSecondaryCard("block");
+    hideMainCard("none");
+    starSelected.innerHTML = selectedValue;
+  }
+
+  setTimeout(infoSubmitted, 1000);
 });

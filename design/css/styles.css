@@ -85,6 +85,8 @@ body {
 }
 
 .star-selection {
+  display: flex;
+  justify-content: center;
   background-color: hsl(213, 19%, 18%);
   color: hsl(25, 97%, 53%);
   border-radius: 25px;
