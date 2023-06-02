@@ -43,16 +43,20 @@ ratingItems.forEach(function (item) {
 
 //Click function for submit button
 submitSelection.addEventListener("click", function () {
-  //Make a loading screen so that it shows the change of these values before moving to next card.
-  this.style.backgroundColor = "hsl(0, 0%, 100%)";
-  this.style.color = "hsl(25, 97%, 53%)";
-  //Make my second card to appear
-  function infoSubmitted() {
-    alert("Thank you for your feedback!");
-    hideSecondaryCard("block");
-    hideMainCard("none");
-    starSelected.innerHTML = selectedValue;
+  //Condition so that you must select a number before submitting.
+  if (selectedValue == null) {
+    alert("Please rate us!");
+  } else {
+    //Make a loading screen so that it shows the change of these values before moving to next card.
+    this.style.backgroundColor = "hsl(0, 0%, 100%)";
+    this.style.color = "hsl(25, 97%, 53%)";
+    //Make my second card to appear
+    function infoSubmitted() {
+      alert("Thank you for your feedback!");
+      hideSecondaryCard("block");
+      hideMainCard("none");
+      starSelected.innerHTML = selectedValue;
+    }
+    setTimeout(infoSubmitted, 1000);
   }
-
-  setTimeout(infoSubmitted, 1000);
 });
