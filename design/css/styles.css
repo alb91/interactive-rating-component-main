@@ -82,19 +82,25 @@ body {
 
 .card-image {
   margin: 15px;
+  display: flex;
+  justify-content: center;
 }
 
 .star-selection {
+  width: fit-content;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: hsl(213, 19%, 18%);
   color: hsl(25, 97%, 53%);
   border-radius: 25px;
-  margin: 10px;
+  margin: auto;
   padding: 10px;
 }
 
 .thank-you {
+  display: flex;
+  justify-content: center;
   color: hsl(0, 0%, 100%);
   margin: 15px;
 }
